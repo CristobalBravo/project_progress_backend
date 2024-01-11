@@ -1,2 +1,2 @@
 # project_progress_backend
-Its is a project test for learning java
+Its is a test project for learning java y springboot! :)
