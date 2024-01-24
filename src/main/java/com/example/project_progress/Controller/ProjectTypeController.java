@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/project-type")
 public class ProjectTypeController {
@@ -60,7 +60,7 @@ public class ProjectTypeController {
 
         Map<String, Object> response = new HashMap<>();
 
-        if(projectType.getPt_name() == null){
+        if(projectType.getPt_name() == null || projectType.getPt_name().isEmpty()){
             String message = "El campo nombre no puede estar vácio";
             response.put("message", message);
             return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
@@ -86,7 +86,7 @@ public class ProjectTypeController {
 
         Map<String, Object> response = new HashMap<>();
 
-        if(projectType.getPt_name() == null){
+        if(projectType.getPt_name() == null || projectType.getPt_name().isEmpty()){
             String message = "El campo nombre no puede estar vácio";
             response.put("message", message);
             return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
