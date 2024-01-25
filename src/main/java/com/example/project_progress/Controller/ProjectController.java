@@ -13,7 +13,7 @@ import java.util.Map;
 @CrossOrigin(value = "*")
 @RestController
 @RequestMapping("api/project")
-public class ProjectoController {
+public class ProjectController {
 
     @Autowired
     private ProjectService projectService;
